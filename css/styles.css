@@ -31,6 +31,7 @@ a:hover {
 
 .btn-danger {
 	background-color: #f44d3c;
+	border-radius: 3;
 }
 
 .text-danger,
