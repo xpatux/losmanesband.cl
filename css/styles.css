@@ -162,11 +162,13 @@ section {
 }
 
 #section2 {
-	background-color: #fff;
+	background-color: #BACDF5;
 }
 
 #section3 {
-	background-color: rgba(0, 0, 0, 0.9);
+	color: #fff;
+	background-size: cover;
+	background: center no-repeat fixed url('https://73c2fc81bef46113450eb9e48b8d1a0978f3847f.googledrive.com/host/0B2KytPC1FKovZHFIRG1FUThXejA/fondo_demo.png');
 }
 
 #section5 {
@@ -174,7 +176,8 @@ section {
 }
 
 #section6 {
-	background-color: #eee;
+	color: #fff;
+	background: center no-repeat fixed url('https://73c2fc81bef46113450eb9e48b8d1a0978f3847f.googledrive.com/host/0B2KytPC1FKovZHFIRG1FUThXejA/bgTop.jpg');
 	min-height: 130px;
 	padding-top: 40px;
 	padding-bottom: 40px;
