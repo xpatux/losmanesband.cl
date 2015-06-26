@@ -723,3 +723,11 @@ nav#footer p {
 	background: #FCAC45;
 	border-color: #FCAC45;
 	color: #ffffff;
+}
+
+.sndifr {
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+	border: none;
+}
