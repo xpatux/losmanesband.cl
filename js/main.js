@@ -46,19 +46,36 @@ function main() {
 		$(document).ready(function () {
 			$("#team").owlCarousel({
 				items: 6,
-				navigation: true, // Show next and prev buttons
+				navigation: false, // Show next and prev buttons
 				slideSpeed: 300,
 				paginationSpeed: 400,
 				autoHeight: true,
 				itemsCustom: [
 				        [0, 1],
-				        [450, 6],
-				        [600, 6],
-				        [700, 6],
-				        [1000, 6],
-				        [1200, 6],
-				        [1400, 6],
-				        [1600, 6]
+				        [450, 3],
+				        [600, 3],
+				        [700, 3],
+				        [1000, 3],
+				        [1200, 3],
+				        [1400, 3],
+				        [1600, 3]
+				      ],
+			});
+			$("#team2").owlCarousel({
+				items: 6,
+				navigation: false, // Show next and prev buttons
+				slideSpeed: 300,
+				paginationSpeed: 400,
+				autoHeight: true,
+				itemsCustom: [
+				        [0, 1],
+				        [450, 3],
+				        [600, 3],
+				        [700, 3],
+				        [1000, 3],
+				        [1200, 3],
+				        [1400, 3],
+				        [1600, 3]
 				      ],
 			});
 
