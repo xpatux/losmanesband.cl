@@ -354,6 +354,11 @@ img.img-circle.team-img {
 /* Services Section */
 
 #tf-musica {
+	background: url(https://73c2fc81bef46113450eb9e48b8d1a0978f3847f.googledrive.com/host/0B2KytPC1FKovZHFIRG1FUThXejA/fondo_demo.png);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	padding: 80px 0;
 }
 
@@ -383,7 +388,7 @@ img.img-circle.team-img {
 }
 /* Clients Section */
 
-#tf-clients {
+#tf-videos {
 	background: url(../img/04.jpg);
 	background-size: cover;
 	background-position: center;
