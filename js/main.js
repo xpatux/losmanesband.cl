@@ -44,6 +44,14 @@ function main() {
 		})
 
 		$(document).ready(function () {
+			var time = 5; // time in seconds
+
+			var $progressBar,
+				$bar,
+				$elem,
+				isPause,
+				tick,
+				percentTime;
 			$("#team").owlCarousel({
 				items: 6,
 				navigation: false, // Show next and prev buttons
@@ -78,6 +86,71 @@ function main() {
 				        [1600, 3]
 				      ],
 			});
+
+			$("#galeria").owlCarousel({
+				slideSpeed: 500,
+				paginationSpeed: 500,
+				singleItem: true,
+				afterInit: progressBar,
+				afterMove: moved,
+				startDragging: pauseOnDragging,
+				autoHeight: true,
+				autoWidth: true
+			});
+
+			function progressBar(elem) {
+				$elem = elem;
+				//build progress bar elements
+				buildProgressBar();
+				//start counting
+				start();
+			}
+
+			//create div#progressBar and div#bar then prepend to $("#owl-demo")
+			function buildProgressBar() {
+				$progressBar = $("<div>", {
+					id: "progressBar"
+				});
+				$bar = $("<div>", {
+					id: "bar"
+				});
+				$progressBar.append($bar).prependTo($elem);
+			}
+
+			function start() {
+				//reset timer
+				percentTime = 0;
+				isPause = false;
+				//run interval every 0.01 second
+				tick = setInterval(interval, 10);
+			};
+
+			function interval() {
+				if (isPause === false) {
+					percentTime += 1 / time;
+					$bar.css({
+						width: percentTime + "%"
+					});
+					//if percentTime is equal or greater than 100
+					if (percentTime >= 100) {
+						//slide to next item
+						$elem.trigger('owl.next')
+					}
+				}
+			}
+
+			//pause while dragging
+			function pauseOnDragging() {
+				isPause = true;
+			}
+
+			//moved callback
+			function moved() {
+				//clear interval
+				clearTimeout(tick);
+				//start again
+				start();
+			}
 
 			$("#clients").owlCarousel({
 
